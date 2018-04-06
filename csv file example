@@ -1,0 +1,7 @@
+productCode, speed, serviceType, streetAddress, city, postalCode, country, latitude, longitude
+string, integer, array, string, string, string, string, float, float
+
+
+
+
+//attribute and type
