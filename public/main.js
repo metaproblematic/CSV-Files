@@ -3,8 +3,6 @@ mainVm = new Vue({
 	data: {
 		files: '',
 		newFile: '',
-		recordComplete: false,
-
 	},
 	mounted: function() {
 		$.get('/files', (dataFromServer) => {
