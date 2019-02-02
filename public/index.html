@@ -1,24 +1,23 @@
 
 <!DOCTYPE html>
-<html lang="en"><head>
-        <meta charset="UTF-8">
-        <script src="https://unpkg.com/vue"></script>
-        <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-	    crossorigin="anonymous"></script>
-        <link rel="stylesheet" type="text/css" href="/main.css">
-    </head>
-    <body>
-     <div id="app">
-    	<br>
-    	<br>
-    	<h4>Copy and paste a CSV file into the form below, then refresh the page to see results</h4>
-		<br>
-         <form method="post" v-on:submit="addFile($event)" action="/newFile" enctype="text/plain">
-		 <textarea id="text-box" v-model="newFile" rows="10" cols="50"></textarea>
-		   <input type="submit" value="submit"></input>
-		   <div v-for="file in files"><p>{{file}}</p></div>
-		</form>
-	</div>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" type="text/css" href="/main.css">
+    <title>CSV App</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <h4>Copy and paste a CSV file into the form below, then refresh the page to see results</h4>
+      </div>
+      <form method="post" v-on:submit="addFile($event)" action="/newFile" enctype="text/plain">
+        <textarea id="text-box" v-model="newFile" rows="10" cols="50"></textarea>
+        <input type="submit" value="submit"></input>
+        <div v-for="file in files"><p>{{file}}</p></div>
+      </form>
+      </div>
     <script src="/main.js"></script>
- </body>
+  </body>
 </html>
